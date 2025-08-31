@@ -2,12 +2,12 @@
   "name": "shubham-kaushik-site",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --configuration production",
+  "postbuild": "mv dist/shubham-kaushik-site/browser/redirects.txt dist/shubham-kaushik-site/browser/_redirects",
+  "test": "ng test"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.0.0",
