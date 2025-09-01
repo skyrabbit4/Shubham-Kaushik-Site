@@ -1,0 +1,14 @@
+html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centers vertically */
+    align-items: center;      /* centers horizontally */
+    text-align: center;
+    height: 100vh;            /* full height of viewport */
+    font-family: Arial, sans-serif;
+}
