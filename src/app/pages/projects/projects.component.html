@@ -1,5 +1,38 @@
-<h2>My Projects</h2>
-<ul>
-  <li>Theodoc - SaaS for documentation</li>
-  <li>Portfolio Website - Built with Angular & Netlify</li>
-</ul>
+<section class="projects">
+  <header class="projects__header">
+    <h2>My Projects</h2>
+    <p class="projects__subtitle">A few things I’ve built recently.</p>
+  </header>
+
+  <ul class="projects__grid">
+    @for (project of projects; track project.id) {
+      <li class="project-card">
+        <div class="project-card__body">
+          <h3 class="project-card__title">{{ project.name }}</h3>
+          <p class="project-card__desc">{{ project.description }}</p>
+
+          <div class="project-card__tech">
+            <span class="project-card__tech-label">Tech</span>
+            <div class="tech-badges">
+              @for (tech of project.tech; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card__actions">
+          @if (project.githubUrl) {
+            <a class="btn btn--secondary" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">GitHub</a>
+          }
+          @if (project.liveUrl) {
+            <a class="btn btn--primary" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">Live</a>
+          }
+        </div>
+      </li>
+    }
+    @empty {
+      <li class="projects__empty">No projects added yet.</li>
+    }
+  </ul>
+</section>

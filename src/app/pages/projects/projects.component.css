@@ -1,0 +1,143 @@
+.projects {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 24px 16px;
+}
+
+.projects__header {
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.projects__subtitle {
+	margin: 6px 0 0;
+	color: #555;
+}
+
+.projects__grid {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 14px;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+	.projects__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.projects__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.project-card {
+	border: 1px solid #eee;
+	border-radius: 12px;
+	padding: 14px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 190px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+	transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.project-card:hover {
+	transform: translateY(-2px);
+	border-color: #e5e5e5;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card__title {
+	margin: 0 0 8px;
+	font-size: 18px;
+}
+
+.project-card__desc {
+	margin: 0 0 12px;
+	color: #333;
+	line-height: 1.45;
+}
+
+.project-card__tech {
+	margin-top: 6px;
+}
+
+.project-card__tech-label {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	color: #666;
+	margin-bottom: 8px;
+}
+
+.tech-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.tech-badge {
+	display: inline-block;
+	padding: 6px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	border: 1px solid #e7e7e7;
+	background: #fafafa;
+	color: #333;
+}
+
+.project-card__actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 12px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 13px;
+	border: 1px solid transparent;
+}
+
+.btn--secondary {
+	background: #fff;
+	border-color: #ddd;
+	color: #111;
+}
+
+.btn--primary {
+	background: #111;
+	border-color: #111;
+	color: #fff;
+}
+
+.btn:hover {
+	filter: brightness(0.98);
+}
+
+.btn:active {
+	transform: translateY(1px);
+}
+
+.btn:focus-visible {
+	outline: 3px solid rgba(0, 0, 0, 0.2);
+	outline-offset: 2px;
+}
+
+.projects__empty {
+	text-align: center;
+	color: #666;
+	padding: 16px;
+}
