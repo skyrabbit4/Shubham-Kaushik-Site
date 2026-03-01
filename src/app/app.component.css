@@ -11,4 +11,48 @@ html,body{
     text-align: center;
     height: 100vh;            /* full height of viewport */
     font-family: Arial, sans-serif;
+}/* Smooth scroll for #section jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sticky navbar */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.site-nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+/* Prevent section titles from hiding behind sticky header */
+section {
+  scroll-margin-top: 70px;
+  padding: 40px 0;
+}
+
+/* Mobile: allow wrapping */
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
