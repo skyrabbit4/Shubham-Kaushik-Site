@@ -1,29 +1,53 @@
-/* Global styles */
-
+/* ============================================================
+   DESIGN TOKENS — Dark / Techie Theme
+   ============================================================ */
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-text: #111827;
-  --color-text-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-bg: #fff;
-  --color-bg-muted: #f3f4f6;
-  --color-accent: #2563eb;
+  --font-sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Colors */
+  --color-bg:          #050508;
+  --color-bg-surface:  #0a0a14;
+  --color-bg-card:     #0d0d1c;
+  --color-bg-muted:    #111128;
+
+  --color-text:        #e2e8f0;
+  --color-text-muted:  #64748b;
+  --color-text-dim:    #334155;
+
+  --color-border:      rgba(99, 102, 241, 0.18);
+  --color-border-glow: rgba(0, 255, 163, 0.3);
+
+  --color-accent:      #00ffa3;
+  --color-accent-dim:  rgba(0, 255, 163, 0.12);
+  --color-accent-glow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(0, 255, 163, 0.15);
+
+  --color-purple:      #818cf8;
+  --color-purple-dim:  rgba(129, 140, 248, 0.12);
+
+  --color-cyan:        #22d3ee;
+
+  /* Spacing & Layout */
+  --max-w: 900px;
+  --header-h: 60px;
+
+  /* Radius */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --max-w: 800px;
-  --header-h: 58px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.6), 0 0 1px rgba(99, 102, 241, 0.2);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 255, 163, 0.2), 0 0 30px rgba(0, 255, 163, 0.08);
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* ============================================================
+   GLOBAL RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -33,6 +57,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Subtle grid background */
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 a {
@@ -40,12 +69,22 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+a:hover { text-decoration: none; }
 
 h1, h2, h3, h4 {
   line-height: 1.2;
   margin-top: 0;
   letter-spacing: -0.02em;
+  color: var(--color-text);
 }
+
+::selection {
+  background: var(--color-accent);
+  color: #050508;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 163, 0.4); }

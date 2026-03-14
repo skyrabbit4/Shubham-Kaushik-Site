@@ -1,6 +1,11 @@
+<!-- ======================================================
+     HEADER / NAV
+     ====================================================== -->
 <header class="site-header">
   <nav class="site-nav">
-    <a class="brand" href="#home">Shubham Kaushik</a>
+    <a class="brand" href="#home">
+      <span class="brand__bracket">&lt;</span>SK<span class="brand__bracket">/&gt;</span>
+    </a>
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -10,30 +15,236 @@
   </nav>
 </header>
 
+<!-- ======================================================
+     MAIN
+     ====================================================== -->
 <main class="main-content">
+
+  <!-- ---- HERO ---- -->
   <section id="home" class="intro">
-    <h1>Hi, I'm Shubham Kaushik 👋</h1>
-    <p class="intro__role">Software Developer · SaaS Builder · Freelance & Projects</p>
-    <p class="intro__company">Working as a Software Developer at <a href="https://www.boeing.com/" target="_blank" rel="noopener">Boeing</a></p>
-  </section>
+    <div class="intro__terminal">
+      <!-- Window bar -->
+      <div class="terminal-bar">
+        <div class="terminal-dots">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+        </div>
+        <span class="terminal-title">skyrabbit4&#64;boeing — bash — 120×38</span>
+        <span class="terminal-status"><span class="status-dot"></span>online</span>
+      </div>
 
-  <section id="about" class="about">
-    <h2>About</h2>
-    <p>I'm Shubham Kaushik, a software developer focused on building SaaS and working on real-world projects.</p>
-  </section>
+      <!-- Body -->
+      <div class="terminal-body">
+        <p class="t-cmd"><span class="t-prompt">skyrabbit4&#64;boeing</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> whoami</p>
+        <h1 class="nf-name">Shubham Kaushik</h1>
+        <div class="nf-rows">
+          <p class="nf-row"><span class="nf-key">role</span><span class="nf-sep">:</span><span class="nf-val"> Software Developer · SaaS Builder</span></p>
+          <p class="nf-row"><span class="nf-key">company</span><span class="nf-sep">:</span><span class="nf-val"> <a href="https://www.boeing.com/" target="_blank" rel="noopener">Boeing</a> ✈</span></p>
+          <p class="nf-row"><span class="nf-key">stack</span><span class="nf-sep">:</span><span class="nf-val"> TS · Angular · C# · .NET · Node</span></p>
+          <p class="nf-row"><span class="nf-key">status</span><span class="nf-sep">:</span><span class="nf-building"> building next thing ⚡</span></p>
+        </div>
+        <p class="t-cmd t-cmd--gap"><span class="t-prompt">skyrabbit4&#64;boeing</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span><span class="cursor"> _</span></p>
+      </div>
 
-  <section id="projects" class="projects-wrap">
-    <h2>Projects</h2>
-    <p>Selected work — I'll add project cards here next.</p>
-  </section>
+      <!-- Scanline overlay -->
+      <div class="scanline"></div>
+    </div>
 
-  <section id="contact" class="contact-wrap">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="mailto:shubham.kaushik004&#64;gmail.com">📧 shubham.kaushik004&#64;gmail.com</a>
-      <a href="https://www.linkedin.com/in/shubham-kaushik-0040a599/" target="_blank" rel="noopener">💼 LinkedIn</a>
-      <a href="https://github.com/skyrabbit4" target="_blank" rel="noopener">🖥️ GitHub</a>
-      <a href="https://twitter.com/skyrabbit__" target="_blank" rel="noopener">🐦 Twitter</a>
+    <div class="intro__ctas">
+      <a href="#projects" class="cta cta--primary">View Projects</a>
+      <a href="https://github.com/skyrabbit4" target="_blank" rel="noopener" class="cta cta--ghost">GitHub ↗</a>
     </div>
   </section>
+
+  <!-- ---- ABOUT ---- -->
+  <section id="about" class="about">
+    <div class="section-label">01. about</div>
+    <h2>Building things that matter</h2>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>
+          I'm a software developer with a passion for building SaaS products and open-source tools.
+          By day I ship production code at <a href="https://www.boeing.com/" target="_blank" rel="noopener">Boeing</a>.
+          By night I build things that scratch my own itch.
+        </p>
+        <p>
+          I care about developer experience, clean APIs, and fast UIs. I've built everything from
+          competitive coding platforms to AI-powered government scheme finders.
+        </p>
+      </div>
+      <div class="about__stats">
+        <div class="stat-card">
+          <span class="stat-card__num">7+</span>
+          <span class="stat-card__label">Projects shipped</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">3+</span>
+          <span class="stat-card__label">Live products</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">∞</span>
+          <span class="stat-card__label">Side quests</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- PROJECTS ---- -->
+  <section id="projects" class="projects-wrap">
+    <div class="section-label">02. projects</div>
+    <h2>Things I've built</h2>
+    <p class="section-subtitle">Selected work from my GitHub — real products, not just todo apps.</p>
+
+    <div class="projects-grid">
+
+      <!-- api-buddy-cloud -->
+      <div class="project-card project-card--featured">
+        <div class="project-card__header">
+          <div class="project-card__icon">⚡</div>
+          <div class="project-card__badges">
+            <span class="badge badge--live">● Live</span>
+            <span class="badge badge--featured">Featured</span>
+          </div>
+        </div>
+        <h3 class="project-card__name">Mock API</h3>
+        <p class="project-card__desc">
+          A tool for frontend devs to mock APIs instantly. Stop waiting for the backend —
+          simulate endpoints, responses, and delays right in the browser.
+        </p>
+        <div class="project-card__tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">Node.js</span>
+        </div>
+        <div class="project-card__actions">
+          <a href="https://github.com/skyrabbit4/api-buddy-cloud" target="_blank" rel="noopener" class="project-btn project-btn--ghost">GitHub</a>
+          <a href="https://mockapi.store/" target="_blank" rel="noopener" class="project-btn project-btn--primary">Live ↗</a>
+        </div>
+      </div>
+
+      <!-- govscheme-finder -->
+      <div class="project-card project-card--featured">
+        <div class="project-card__header">
+          <div class="project-card__icon">🏛️</div>
+          <div class="project-card__badges">
+            <span class="badge badge--live">● Live</span>
+            <span class="badge badge--featured">Featured</span>
+          </div>
+        </div>
+        <h3 class="project-card__name">GovScheme Finder</h3>
+        <p class="project-card__desc">
+          Drop your profile and instantly discover government schemes you're eligible for.
+          AI-powered matching across central and state programs.
+        </p>
+        <div class="project-card__tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">AI</span>
+          <span class="tech-tag">React</span>
+        </div>
+        <div class="project-card__actions">
+          <a href="https://github.com/skyrabbit4/govscheme-finder" target="_blank" rel="noopener" class="project-btn project-btn--ghost">GitHub</a>
+          <a href="https://govscheme-finder.lovable.app/" target="_blank" rel="noopener" class="project-btn project-btn--primary">Live ↗</a>
+        </div>
+      </div>
+
+      <!-- codearena -->
+      <div class="project-card project-card--featured">
+        <div class="project-card__header">
+          <div class="project-card__icon">⚔️</div>
+          <div class="project-card__badges">
+            <span class="badge badge--building">◌ Building</span>
+            <span class="badge badge--featured">Featured</span>
+          </div>
+        </div>
+        <h3 class="project-card__name">CodeArena</h3>
+        <p class="project-card__desc">
+          Real-time competitive coding platform — battle head-to-head solving coding challenges
+          live in the browser. Think LeetCode meets multiplayer.
+        </p>
+        <div class="project-card__tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">WebSocket</span>
+          <span class="tech-tag">Node.js</span>
+        </div>
+        <div class="project-card__actions">
+          <a href="https://github.com/skyrabbit4/CodeArena" target="_blank" rel="noopener" class="project-btn project-btn--primary">GitHub ↗</a>
+        </div>
+      </div>
+      <!-- theodoc -->
+      <div class="project-card">
+        <div class="project-card__header">
+          <div class="project-card__icon">📄</div>
+          <div class="project-card__badges">
+            <span class="badge badge--wip">⬡ WIP</span>
+          </div>
+        </div>
+        <h3 class="project-card__name">Theodoc</h3>
+        <p class="project-card__desc">
+          A documentation tool for managing and viewing project docs.
+          Clean, fast, built for developer teams.
+        </p>
+        <div class="project-card__tech">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">.NET</span>
+        </div>
+        <div class="project-card__actions">
+          <a href="https://github.com/skyrabbit4/theodoc" target="_blank" rel="noopener" class="project-btn project-btn--primary">GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects-more">
+      <a href="https://github.com/skyrabbit4" target="_blank" rel="noopener" class="cta cta--ghost">
+        See all repos on GitHub ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- ---- CONTACT ---- -->
+  <section id="contact" class="contact-wrap">
+    <div class="section-label">03. contact</div>
+    <h2>Let's connect</h2>
+    <p class="section-subtitle">
+      Open to interesting projects, collaborations, and conversations.
+    </p>
+    <div class="contact-grid">
+      <a href="mailto:shubham.kaushik004&#64;gmail.com" class="contact-card">
+        <span class="contact-card__icon">✉</span>
+        <div>
+          <div class="contact-card__label">Email</div>
+          <div class="contact-card__value">shubham.kaushik004&#64;gmail.com</div>
+        </div>
+      </a>
+      <a href="https://github.com/skyrabbit4" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-card__icon">&#60;/&#62;</span>
+        <div>
+          <div class="contact-card__label">GitHub</div>
+          <div class="contact-card__value">&#64;skyrabbit4</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/shubham-kaushik-0040a599/" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-card__icon">in</span>
+        <div>
+          <div class="contact-card__label">LinkedIn</div>
+          <div class="contact-card__value">Shubham Kaushik</div>
+        </div>
+      </a>
+      <a href="https://twitter.com/skyrabbit__" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-card__icon">𝕏</span>
+        <div>
+          <div class="contact-card__label">Twitter / X</div>
+          <div class="contact-card__value">&#64;skyrabbit__</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
 </main>
+
+<!-- ---- FOOTER ---- -->
+<footer class="site-footer">
+  <span class="footer-mono">// built with Angular · deployed with ❤️</span>
+  <span class="footer-copy">© 2026 Shubham Kaushik</span>
+</footer>
